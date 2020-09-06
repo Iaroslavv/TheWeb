@@ -1,0 +1,33 @@
+.navbar-brand {
+    color: blue;
+    font-size: 17px;
+    font-style: oblique;
+    text-shadow: burlywood;
+    margin: 15px;
+    padding: 20px;
+}
+.container a {
+    color: #9ba39b;
+    text-align: center;
+}
+
+body, html {
+    height: 100%;
+  }
+.bg {
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+/* @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  } */
