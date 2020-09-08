@@ -1,21 +1,39 @@
-.navbar-brand {
-    color: blue;
+/* .navbar-brand {
+    color: #666360;
     font-size: 17px;
     font-style: oblique;
     text-shadow: burlywood;
-    margin: 15px;
-    padding: 20px;
+    margin-top: 15px;
+} */
+.topnav-centered a {
+    color: #707f80;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    text-align: center;
+    letter-spacing: 7px;
+    word-spacing: 7px;
+    margin-top: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    float: none;
 }
-.container a {
-    color: #9ba39b;
+
+.topnav-centered a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
     text-align: center;
 }
 
 body, html {
     height: 100%;
   }
+  
 .bg {
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
