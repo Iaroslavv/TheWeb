@@ -5,6 +5,8 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
+    <script type="text/javascript"
+         src="{{ url_for('static', filename='css/script.js') }}"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -18,24 +20,58 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-  </head>
-  <nav class="navbar navbar-expand-sm fixed-top navbar-light">
-    <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-          <div class="topnav-centered">
-              <a class="nav-link" href="#about">About</a>
-              <!-- <a class="nav-link" href="#music">Music</a>
-              <a class="nav-link" href="#feedback">Feedback</a>
-              <a class="nav-link" href="#contact">Contact</a> -->
-            </div>
+    <nav class="navbar h-navbar p-0 fixed-top" role="navigation">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-3 col-lg-2 col-sm-4 col-5">
+            <a href="/">
+              <img alt="Iaroslav" class="img-fluid py-3" img src="{{ url_for('static', filename='css/mylogo.png') }}" aria-role="logo">
+            </a>
+          </div>
+          <div class="col-xl-9 col-lg-10 col-sm-8 col-7">
+            <ul class="navbar-nav flex-row justify-content-end flex-wrap align-items-center mr-lg-4 mr-xl-0">
+              <li class="nav-item px-3 mb-0 position-relative d-none d-lg-flex"> <a class="d-block w-100 h-100 text-white position-relative top-link" href="#"><strong>About me</strong></a>
+              </li>
+              <li class="nav-item px-3 mb-0 position-relative d-none d-lg-flex"> <a class="d-block w-100 h-100 text-white position-relative top-link" href="/songs/"><strong>Songs</strong></a>
+              </li>
+              <li class="nav-item px-3 mb-0 position-relative d-none d-lg-flex"> <a class="d-block w-100 h-100 text-white position-relative top-link" href="/feedback/"><strong>Feedback</strong></a>
+              </li>
+              <li class="nav-item px-3 mb-0 position-relative d-none d-lg-flex"> <a class="d-block w-100 h-100 text-white position-relative top-link" href="/social/"><strong>Social</strong></a>
+              </li>
+              <li class="nav-item px-3 mb-0 position-relative d-none d-lg-flex"> <a class="d-block w-100 h-100 text-white position-relative top-link" href="/support/"><strong>Support</strong></a>
+              </li>
+              <li class="nav-item px-3 mb-0 position-relative d-none d-lg-flex"> <a class="d-block w-100 h-100 text-white position-relative top-link" href="/contact/"><strong>Contact</strong></a>
+              </li>
+            </ul>
+            <button id="sidenav-open-btn" class="menu-hamburger position-absolute pointer p-0"> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
         </div>
+      </div>
+    </nav>
+  </head>
+  <section class="first">
+    <div class="container">
     </div>
-</nav>  
+  </section>
+  <section>
+    <div class="container">
+      <h1>Here is some more content</h1>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h1>Here is some more content</h1>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h1>Here is some more content</h1>
+    </div>
+  </section> 
       <div class="bg"></div>
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

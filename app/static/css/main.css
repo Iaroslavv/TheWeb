@@ -1,51 +1,53 @@
-/* .navbar-brand {
-    color: #666360;
-    font-size: 17px;
-    font-style: oblique;
-    text-shadow: burlywood;
-    margin-top: 15px;
-} */
-.topnav-centered a {
-    color: #707f80;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: larger;
-    text-align: center;
-    letter-spacing: 7px;
-    word-spacing: 7px;
-    margin-top: 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    float: none;
+/* ul currently is not working .*/
+ul {
+  color: #090a0a;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
 }
 
-.topnav-centered a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.container {
-    text-align: center;
+.navbar-nav li:hover>.dropdown-menu {
+  display: block;
 }
 
 body, html {
     height: 100%;
   }
+
+.first {
+  height:100vh;
+  min-height:400px;
+  background-size:cover;
+  background-image:url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg");
+  }
   
-.bg {
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.affix {
+  -webkit-transition:padding 0.2s ease-out;
+  -moz-transition:padding 0.2s ease-out;  
+  -o-transition:padding 0.2s ease-out;         
+  transition:padding 0.2s ease-out;
 }
-
-
-
-
-/* @media screen and (max-width: 500px) {
-    .navbar a {
-      float: none;
-      display: block;
+  
+@media (min-width:768px) {
+    .affix-top {
+      /* navbar style at top */
+      background: #000000;;
+      border-color:transparent;
+      padding: 15px;
+      margin-top: 15px;
+      -webkit-transition:all 0.5s ease;
+      -moz-transition:all 0.5s ease; 
+      -o-transition:all 0.5s ease;         
+      transition:all 0.5s ease;  
     }
-  } */
+}
+ 
+.affix-top.navbar .nav>li>a:hover,
+  .affix-top.navbar .navbar-brand
+  {
+     color: rgb(49, 48, 48);
+  }
+  
+section {
+  height:calc(90% - 50px);
+  height: 90vh;
+  }
