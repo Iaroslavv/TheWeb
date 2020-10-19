@@ -3,6 +3,13 @@ from flask import render_template
 
 
 @app.route("/")
+@app.route("/main")
 def index():
-    mytitle = "Heyheyehey"
-    return render_template("layout.html", mytitle=mytitle)
+    title = "Iaroslav Bulimov Music"
+    return render_template("layout.html", title=title)
+
+
+@app.route("/about")
+def about():
+    title = "About"
+    return render_template("about.html", title=title)

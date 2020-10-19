@@ -14,18 +14,20 @@ nav .navbar-nav li a {
   font-family: 'Courier New', Courier, monospace;
   word-spacing: 3px;
 }
+
 nav .navbar-nav li a:hover {
   color: #ebf0e5;
 }
 
 .navbar-nav > li > .dropdown-menu{
-  background-color: #161414;
+  background-color: #0c0b0b;
 }
 
 .navbar-nav > li > .dropdown-menu a {
-  background-color: #1a1717;
+  background-color: #110f0f;
   color: #c5c4bd;
 }
+
 .navbar-nav > li > .dropdown-menu a:hover{
   color: #ffffff;
 }
@@ -33,16 +35,33 @@ nav .navbar-nav li a:hover {
 #navbarSupportedContent {
   background: transparent;
 }
+
+#brand {
+  color: #e4e3ded8;
+  font-family: 'Courier New', Courier, monospace;
+  word-spacing: 3px;
+}
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(250, 250, 237);
+  letter-spacing: 2px;
+  height: 150px;
+  line-height: 30px;
+  text-align: center;
+}
+
 h4 {
   font-family: 'Courier New', Courier, monospace;
   letter-spacing: 2px;
   color: rgba(249, 250, 246, 0.959);
 }
+
 h5 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: rgb(250, 250, 237);
   letter-spacing: 2px;
 }
+
 body, html {
     height: 100%;
   }
@@ -52,17 +71,4 @@ body, html {
   min-height:400px;
   background-size:cover;
   background-image:url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg");
-  }
-  
-/* .affix {
-  -webkit-transition:padding 0.2s ease-out;
-  -moz-transition:padding 0.2s ease-out;  
-  -o-transition:padding 0.2s ease-out;         
-  transition:padding 0.2s ease-out;
-} */
-  
-
-section {
-  height:calc(90% - 50px);
-  height: 90vh;
   }

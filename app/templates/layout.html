@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Iaroslav Bulimov Music</title>
+  </head>
+  <body>
+    {% block image %}
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
+    {% endblock image %}
     <script type="text/javascript"
          src="{{ url_for('static', filename='css/script.js') }}"></script>
     <!-- Required meta tags -->
@@ -20,7 +25,11 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black" style="background-color: #111416;">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black" style="background-color: #040505;">
+      <a class="navbar-brand" id="brand" href="main">
+        <img src="{{ url_for('static', filename='css/note.png') }}"width="40" height="30" class="d-inline-block align-top" alt="">
+        Iaroslav Bulimov
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -42,7 +51,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="https://www.insragram.com/iaroslavbulimov">Instagram</a>
               <a class="dropdown-item" href="#">Facebook</a>
-              <a class="dropdown-item" href="#">VKontakte</a>
+              <a class="dropdown-item" href="https://vk.com/yaroslav77">VKontakte</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Support</a>
@@ -53,21 +62,22 @@
         </ul>
       </div>
     </nav>
-  </head>
+    <div class="bg"></div>
   <section class="first">
     <div class="center">
+      {% block content %}
       <a class="Logo href="#">
-        <img src="{{ url_for('static', filename='css/LOGO.png') }}"width="500" height="190" alt="">
+        <img src="{{ url_for('static', filename='css/LOGO.png') }}" width="500" height="190" alt="">
       </a>
       <h4>I am excited to finally be able to share my recordings with you!
       </h4>
       <h5>Feel free to download my music and share it with the others!</h5>
       <h5>I'll be releasing one song per month and upload it here.</h5>
    </div>
-    <div class="container">
-    </div>
+   {% endblock content %}
   </section>
-  <section>
+
+  <!-- <section>
     <div class="container">
       <h1>Here is some more content</h1>
     </div>
@@ -80,9 +90,8 @@
   <section>
     <div class="container">
       <h1>Here is some more content</h1>
-    </div>
-  </section> 
-      <div class="bg"></div>
+    </div> -->
+  <!-- </section> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
