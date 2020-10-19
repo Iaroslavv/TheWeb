@@ -8,9 +8,26 @@
   top: 50%;
   width: 100%;
 }
-.nav-item {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: aliceblue;
+
+nav .navbar-nav li a {
+  color: #f7f5eb;
+  font-family: 'Courier New', Courier, monospace;
+  word-spacing: 3px;
+}
+nav .navbar-nav li a:hover {
+  color: #ebf0e5;
+}
+
+.navbar-nav > li > .dropdown-menu{
+  background-color: #161414;
+}
+
+.navbar-nav > li > .dropdown-menu a {
+  background-color: #1a1717;
+  color: #c5c4bd;
+}
+.navbar-nav > li > .dropdown-menu a:hover{
+  color: #ffffff;
 }
 
 #navbarSupportedContent {
