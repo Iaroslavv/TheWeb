@@ -13,3 +13,8 @@ def index():
 def about():
     title = "About"
     return render_template("about.html", title=title)
+
+@app.route("/songs")
+def songs():
+    title = "Songs"
+    return render_template("songs.html", title=title)

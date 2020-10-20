@@ -32,6 +32,12 @@ nav .navbar-nav li a:hover {
   color: #f3f0f0;
 }
 
+#player { 
+  overflow: hidden;
+  max-width: 350px;
+  background: transparent;
+}
+
 #navbarSupportedContent {
   background: transparent;
 }
@@ -101,13 +107,3 @@ animation: 50s para infinite linear;
 		400px 0;
 	}
 }
-/* body, html {
-    height: 100%;
-  } */
-
-/* .first {
-  height:100vh;
-  min-height:400px;
-  background-size:cover;
-  background-image:url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg");
-  } */
