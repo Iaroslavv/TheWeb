@@ -25,7 +25,7 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black" style="background-color: #040505;">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black" style="background-color:rgb(19, 18, 18)">
       <a class="navbar-brand" id="brand" href="main">
         <img src="{{ url_for('static', filename='css/note.png') }}"width="40" height="30" class="d-inline-block align-top" alt="">
         Iaroslav Bulimov
@@ -34,19 +34,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto" id="navmenu">
           <li class="nav-item">
-            <a class="nav-link" href="about">About</a>
+            <a class="nav-link" href="about"><strong>About</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="songs">Songs</a>
+            <a class="nav-link" href="songs"><strong>Songs</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="feedback">Feedback</a>
+            <a class="nav-link" href="feedback"><strong>Feedback</strong></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Social
+              <strong>Social</strong>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="https://www.insragram.com/iaroslavbulimov">Instagram</a>
@@ -54,10 +54,10 @@
               <a class="dropdown-item" href="https://vk.com/yaroslav77">VKontakte</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Support</a>
+            <a class="nav-link" href="#"><strong>Support</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#"><strong>Contact</strong></a>
           </li>
         </ul>
       </div>
