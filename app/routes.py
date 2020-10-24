@@ -1,5 +1,5 @@
 from app import app, db
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for, flash
 from app.forms import Post
 from app.models import Comment
 
@@ -31,15 +31,10 @@ def comments():
 @app.route("/feedback", methods=["POST", "GET"])
 def feedback():
     form = Post()
-    print("BEFORE REQUEST")
     if form.validate_on_submit():
-        print("REQUEST WORKED")
         post = Comment(comment=form.text.data)
-        print("BEFORE ADD")
         db.session.add(post)
-        print("ADDED")
         db.session.commit()
-        print("COMMITED TO DB")
         flash("Thanks for your feedback!", "success")  # need to fix
         return redirect(url_for("comments"))
     return render_template(
