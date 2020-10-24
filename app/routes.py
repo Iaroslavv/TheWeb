@@ -3,6 +3,7 @@ from flask import render_template, redirect, url_for, flash
 from app.forms import Post
 from app.models import Comment
 
+
 @app.route("/")
 @app.route("/main")
 def index():
@@ -41,4 +42,3 @@ def feedback():
         "feedback.html",
         form=form,
     )
-  

@@ -8,4 +8,3 @@ class Post(FlaskForm):
 
     text = TextAreaField("Comment", validators=[DataRequired()])
     submit = SubmitField("Submit")
-
