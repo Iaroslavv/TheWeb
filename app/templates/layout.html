@@ -10,8 +10,6 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
-    <script type="text/javascript"
-         src="{{ url_for('static', filename='css/script.js') }}"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -63,6 +61,13 @@
       </div>
     </nav>
     <div class="bg"></div>
+    <div class="container">
+      {% for message in get_flashed_messages() %}
+      <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          {{ message }}
+      </div>
+      {% endfor %}  
   <section class="first">
     <div class="center">
       {% block content %}
@@ -74,24 +79,17 @@
       <h5>Feel free to download my music and share it with the others!</h5>
       <h5>I'll be releasing one song per month and upload it here.</h5>
    </div>
+   {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
    {% endblock content %}
   </section>
-
-  <!-- <section>
-    <div class="container">
-      <h1>Here is some more content</h1>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <h1>Here is some more content</h1>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <h1>Here is some more content</h1>
-    </div> -->
-  <!-- </section> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

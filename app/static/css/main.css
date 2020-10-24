@@ -15,6 +15,40 @@ nav .navbar-nav li a {
   word-spacing: 3px;
 }
 
+.media{
+  background: #1e461e59;
+  width: 100%;
+  max-width: 800px; 
+  height: 20;
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+
+}
+
+#posts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.media-body h4 {
+  white-space: pre-line;
+  color: rgb(234, 238, 235);
+} 
+
+.media-body h5 {
+  color: #bdbcb7;
+
+} 
+
+/* .article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+} */
+
 nav .navbar-nav li a:hover {
   color: #f4f7f1;
 }
