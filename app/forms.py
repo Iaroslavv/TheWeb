@@ -1,10 +1,16 @@
 from flask_wtf import FlaskForm
-from wtforms import TextAreaField, SubmitField
+from wtforms import TextAreaField, SubmitField, StringField, validators
 from wtforms.validators import DataRequired
 
 
 class Post(FlaskForm):
     """Model for feedback."""
 
-    text = TextAreaField("Comment", validators=[DataRequired()])
+    text = TextAreaField(validators=[DataRequired(), validators.Length(max=25)])
+    submit = SubmitField("Submit")
+
+
+class Email(FlaskForm):
+    text = TextAreaField("Email message", validators=[DataRequired()])
+    title = StringField("Subject", validators=[DataRequired()])
     submit = SubmitField("Submit")

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 d-flex flex-row justify-content-center">
+      <div class="media">
+        <div class="media-body">
+<form action="{{ url_for('contact') }}" method="POST">
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    <h5 style="color: rgb(247, 248, 246);">Title</h5>
+    {{ form.title(class='form-control') }}
+    {% for error in form.title.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+  </div>
+
+  <div class="form-group">
+    <h5 style="color: rgb(247, 248, 246);">Message</h5>
+    {{ form.text(class='form-control') }}
+    {% for error in form.text.errors %}
+    <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}
+  </div>
+  {{ form.submit(class='btn btn-success') }}
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock content %}
