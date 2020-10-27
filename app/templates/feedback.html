@@ -2,12 +2,22 @@
 {% import "bootstrap/utils.html" as utils %}
 {% extends "layout.html" %}
 {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 d-flex flex-row justify-content-center">
 <div class="content">
     <div class="center">
-      <h1>Leave a feedback</h1>
       <form method="POST">
-      {{ wtf.quick_form(form) }}
+          {{ form.hidden_tag() }}
+        <div class="form-group">
+          <h4 style="color: rgb(64, 65, 64);">Any feedback will be much appreciated!:)</h4>
+             {{ form.text(class='form-control') }}
+          {{ form.submit(class='btn btn-dark') }}
+        </div>
       </form>
     </div>
+    </div>
   </div>
+  </div>
+</div>
 {% endblock content %}

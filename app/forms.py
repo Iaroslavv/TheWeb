@@ -15,4 +15,4 @@ class Post(FlaskForm):
 class Email(FlaskForm):
     text = TextAreaField("Email message", validators=[DataRequired()])
     title = StringField("Subject", validators=[DataRequired()])
-    submit = SubmitField("Submit")
+    submit = SubmitField("Send")
