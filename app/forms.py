@@ -6,7 +6,9 @@ from wtforms.validators import DataRequired
 class Post(FlaskForm):
     """Model for feedback."""
 
-    text = TextAreaField(validators=[DataRequired(), validators.Length(max=25)])
+    text = TextAreaField(validators=[DataRequired(),
+                                     validators.Length(max=35)]
+                         )
     submit = SubmitField("Submit")
 
 

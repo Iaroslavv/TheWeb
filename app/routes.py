@@ -1,11 +1,15 @@
 from app import app, db, mail
-from flask import render_template, redirect, url_for, flash, current_app
+from flask import (
+    render_template,
+    redirect, url_for,
+    flash, current_app,
+    request,
+)
 from app.forms import Post, Email
 from app.models import Comment
 from flask_mail import Message
 
 
-@app.route("/")
 @app.route("/main")
 def main():
     title = "Iaroslav Bulimov Music"
@@ -24,10 +28,19 @@ def songs():
     return render_template("songs.html", title=title)
 
 
+@app.route("/")
 @app.route("/comments", methods=["POST", "GET"])
 def comments():
-    posts = Comment.query.order_by(Comment.date_posted.desc())
+    page = request.args.get("page", 1, type=int)
+    posts = Comment.query.order_by(Comment.date_posted.desc()).paginate(
+        page=page, per_page=5,
+        )
     return render_template("all_comments.html", posts=posts)
+
+
+@app.route("/support", methods=["POST", "GET"])
+def support():
+    pass
 
 
 @app.route("/feedback", methods=["POST", "GET"])
